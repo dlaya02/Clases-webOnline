@@ -1,3 +1,63 @@
+/*
+position absolut: colocar en un lugar sin que afecte al resto;
+
+float: mandar a esto a flotar en una misma area;
+
+display-inlineblock: multiples cajas a un lada de la otra;
+
+overfloat-hiden: objetos que se salen del contenedor principal
+porque los pongo a flotar, overfloat calcula el maximo de la altura
+con respecto a los objetos, no sirve con un position absolute
+
+
+*/
+
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('iconFont/icomoon.eot?-77bol7');
+	src:url('iconFont/icomoon.eot?#iefix-77bol7') format('embedded-opentype'),
+		url('iconFont/icomoon.woff?-77bol7') format('woff'),
+		url('iconFont/icomoon.ttf?-77bol7') format('truetype'),
+		url('iconFont/icomoon.svg?-77bol7#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-f-abajo:before {
+	content: "\f05b";
+	color: #dd4f24
+
+}
+.icon-f-arriba:before {
+	content: "\f0aa";
+}
+.icon-pluma:before {
+	content: "\e600";
+}
+.icon-estrella:before {
+	content: "\e601";
+	color: #ffbe2c;
+	margin-right: 0.4em;
+	position: relative;
+	top: 0.2em;
+}
+
+
 
 a
 {
@@ -7,42 +67,312 @@ a
 body
 {
 	background: #EEEEEE;
-	font-family: arial;
+	font-family: "Open Sans";
 	font-size: 16px;
 
 }
 
+footer
+{
+	background: #22bce0;
+	text-align: center;;
+	color: rgba(255,255,255,0.7);
+	padding: 1px;
+	
+
+}
+
+footer p:first-child
+{
+	margin-bottom: 0;
+}
+footer p:last-child
+{
+	margin-top: 0;
+}
+
+footer p:last-child:after
+{
+	content: " -";
+}
+
+footer p:last-child:before
+{
+	content: "- ";
+}
 
 header
 {
 	background: #343b54;
 	color: white;
 	padding: 0.5em;
-	border: 1px solid red;
+	b
+	position: relative;
+	/*investigar mejor este overflow*/
+	overflow: hidden;
 	
 
 }
 
 header h1
-{
-	float: left;
+{	
+	float: top;
+	position: relative;
 	font-size: 1.2em;
 	font-weight: normal;
 	padding-left: 0.5em;
-	margin: 0;
+	margin: 0.5em 70px 0 3em;
+	
+	
+
+	
 }
 
 header #logo img 
-{
+{	
+
+
 	float: left;
 	width: 52px;
 	border-right: 1px solid gray;
 	padding-right: 0.5em;
+	border-color: white;
 }
+
+
 header #avatar img
 {
-	
+
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin: 0.4em 1em 0 0;
 		width: 55px;
 		height: 55px;
-		border-radius: 50%;
+		border: green 1px solid;
+		border-radius: 50% ;
+}
+
+nav
+{
+	background: #80bca3;
+	margin: 0;
+	padding: 0 1em 0 1em;
+	position: relative;
+}
+
+nav ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+
+}
+
+nav ul #publicar_nav
+{
+
+	position: absolute;
+	right: 0;
+	top :-0.3em;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
+
+nav ul #publicar_nav a
+{
+	background: #22bce0;
+	border-radius: 2px;
+	font-style: italic;
+	text-decoration: none;
+	text-shadow:  rgba(0,0,0,0.5) 2px 2px 4px;
+	/*parametros de la somnra:
+		-Color (rgba: rojo, verde, azul, alpha "transparencia")
+		-Desplazamiento X
+		-Desplazamiento Y
+		-Difuminacion
+	*/
+	top: 0;
+	height: 1.5em;
+	right: 0;
+	padding: 0.5em 0.7em;
+	padding-top: 0.7em;
+}
+
+nav ul li 
+{
+
+	display:  inline-block;
+	margin: 0 0.5em 0 0;
+}
+
+nav ul li a 
+{
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 0.3em;
+}
+
+
+
+
+#contenido
+{
+	margin: 1em;
+	
+}
+
+#contenido .item
+{
+	background: white;
+	border-bottom: 2px solid #22bce0;
+	/*overflow: hidden;*/
+	min-height: 130px;
+	margin-bottom: 2em;
+
+	position: relative;
+
+
+}
+#contenido .item .autor_item
+{
+	color: #aaa;
+}
+
+
+#contenido .item .datos_item
+{
+	text-align: right;
+	margin: 1em 1em 0.5em 0;
+}
+
+#contenido .item .datos_item
+{
+	color: #aaa;
+}
+
+#contenido .item .datos_item .tag_item 
+{
+	display: inline-block;
+	float: left;
+	background: #f4502a;
+	border-radius: 3px;
+	padding: 0.1em;
+	color: white;
+	font-style: italic;
+	text-decoration: none;
+}
+
+#contenido .item .imagen_item 
+{
+	float: left;
+	margin:  0 1em 0 0;
+	
+}
+#contenido .item .imagen_item img
+{
+	
+	width: 96px;
+}
+
+#contenido .item  .titulo_item
+{
+	font-size: 1.2em;
+	font-style: italic;
+	padding-top: 1em;
+}
+
+#contenido .item  .titulo_item a 
+{
+	color: #444;
+	text-decoration: none;
+}
+
+
+#contenido .item .votacion a
+{
+text-decoration: none;
+} 
+#contenido .item .votacion
+{
+	
+	border-radius: 0 0 0.5em 0.5em;
+	position: absolute;
+	top: 100%;
+	width: 90%;
+	left: 5%;
+	margin-top: 2px;
+}
+
+
+#contenido .item .votacion .comentarios_item,
+#contenido .item .votacion .guardar_item
+{
+	float: right;
+
+}
+
+
+@media screen and (min-width: 700px){
+		
+	#contenido
+	{
+		overflow: hidden;
+	}
+	#contenido .item
+	{
+		float: left;
+		width: 49%; 
+
+	
+	
+	}
+		
+#contenido .item:nth-child(even)
+{
+
+}
+	#contenido .item:nth-child(odd){
+		margin-right: 1em;
+
+	}
+
+	
+
+
+
+}
+
+
+
+
+/*Formularios-------------------------------------------------------------------------------------------------------*/
+
+.formulario 
+{
+	text-align: right;
+	padding: 1em;
+	display: none;
+}
+
+.formulario input
+{
+	border-radius: 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="url"]
+{
+	border: 1px solid #888;
+}
+
+.formulario input[type="submit"]
+{
+	background: #22BCE0;
+	font-style: italic;
+	text-shadow:  rgba(0,0,0,0.5) 2px 2px 4px;
+	color: white;
+	
+	
 }

@@ -4,11 +4,16 @@
 <!--Lang defines el idioma de la pagina-->
 <head>
 	<!--HEAD van todas las etiquetas que no se ven pero que son necesarias: datos, titulo, organizacion del archivo, de donde viene el diseño grafico-->
-	<meta charset="utf-8">
+	<meta charset="utf-8"/>
 	<meta name="description" conten="proyecto del curso de diseño web on line"/>
+	<meta name="viewport" content="width=320, user-scalable=no,  initial-scale=1">
+
 	<title>Clase de web Nº 1</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet"  href="normalize.css"/>
 	<link rel="stylesheet"  href="estilos.css"/>
+
+
 </head>
 <body>
 <!--El BODY contiene la parte de contenido css...-->
@@ -20,36 +25,158 @@
 
 	<nav>
 		<ul>
-				<li><a href="#">elemento1</a></li>
-				<li><a href="#">elemento2</a></li>
-				<li><a href="#">elemento3</a></li>
-				<li id="publucar_nav"><a href="#">elemento4</a></li>
+				<li><a href="#">Phyton</a></li>
+				<li><a href="#">HTML5</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li><a href="#">CSS3</a></li>
+				<li><a href="#">Django</a></li>
+				<li id="publicar_nav"><a href="#" class="icon-pluma"> Publicar</a></li>
 				
 		</ul>
 	</nav>
+
+
+	<form id="formulario" class="formulario"> 
+		<!--label for="text" type="text">sexy Text:</label> -->
+		<input type="text" placeholder="Titulo" id="titulo" required/>
+		<input type="url" placeholder="Link" id="link" required/>
+		<input type="submit" value="Agregar"/>
+	</form>
+
 	<section id="contenido">
 		<article class="item">
+			
 			<figure class="imagen_item">
-				<img alt="pequeño ponnie de freddier" class="imagen_item" src="cafe1.jpg"/>
+				<img alt="pequeño ponnie de freddier" class="imagen_item" src="imagen.jpg"/>
 			</figure>
 			
-			<h2><a href="#">Título del articulo</a></h2>
+			<h2 class="titulo_item">
+				<a href="#">Título del articulo</a>
+			</h2>
 			
-			<div class="Autor_item">Escrito Por: <a href="#">lola landa</a></div>
+			<div class="autor_item">Por:
+				 <a href="#">lola landa</a>
+			</div>
 
-			<div class="datos_item"> <a href="#">Ponny</a></div>
+			<div class="datos_item">
+				 <a href="#" class= "tag_item">Ponny</a>
+				 <psan class= "fecha_item"> <strong> 5 </strong> min ago</psan>
 
-			<psan class= "fecha_item"> <strong> 5 </strong> min ago</psan>
+			</div>
 
+			<div class="votacion"> 
+				<a href="#" class="up icon-f-arriba"></a>
+				666
+				<a href="#" class="down icon-f-abajo"></a>
+
+				<a href="#" class="comentarios_item">69</a>
+				<a href="#" class="guardar_item icon-estrella"></a>
+			</div>
+
+		</article>
+	
+	
+
+
+
+		<article class="item">
+			
+			<figure class="imagen_item">
+				<img alt="pequeño ponnie de freddier" class="imagen_item" src="imagen.jpg"/>
+			</figure>
+			
+			<h2 class="titulo_item">
+				<a href="#">Las mejores charlas que verás en Mejorando.la Conferencia México 2014</a>
+			</h2>
+			
+			<div class="autor_item">Por:
+				 <a href="#">lola landa</a>
+			</div>
+
+			<div class="datos_item">
+				 <a href="#" class= "tag_item">Ponny</a>
+				 <psan class= "fecha_item"> <strong> 5 </strong> min ago</psan>
+
+			</div>
+
+			
 			
 
 			<div class="votacion"> 
-				<a href="#" class="up">up</a>
+				<a href="#" class="up icon-f-arriba"></a>
 				666
-				<a href="#" class="down">down</a>
+				<a href="#" class="down icon-f-abajo"></a>
 
 				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar"></a>
+				<a href="#" class="guardar_item icon-estrella"></a>
+			</div>
+
+		</article>
+	
+		<article class="item">
+			
+			<figure class="imagen_item">
+				<img alt="pequeño ponnie de freddier" class="imagen_item" src="imagen.jpg"/>
+			</figure>
+			
+			<h2 class="titulo_item">
+				<a href="#">Título del articulo</a>
+			</h2>
+			
+			<div class="autor_item">Por:
+				 <a href="#">lola landa</a>
+			</div>
+
+			<div class="datos_item">
+				 <a href="#" class= "tag_item">Ponny</a>
+				 <psan class= "fecha_item"> <strong> 5 </strong> min ago</psan>
+
+			</div>
+
+			
+			
+
+			<div class="votacion"> 
+				<a href="#" class="up icon-f-arriba"></a>
+				666
+				<a href="#" class="down icon-f-abajo"></a>
+
+				<a href="#" class="comentarios_item">69</a>
+				<a href="#" class="guardar_item icon-estrella"></a>
+			</div>
+
+		</article>
+	
+		<article class="item">
+			
+			<figure class="imagen_item">
+				<img alt="pequeño ponnie de freddier" class="imagen_item" src="imagen.jpg"/>
+			</figure>
+			
+			<h2 class="titulo_item">
+				<a href="#">Introducción a Swift, lenguaje de programación de iOS y OS X</a>
+			</h2>
+			
+			<div class="autor_item">Por:
+				 <a href="#">lola landa</a>
+			</div>
+
+			<div class="datos_item">
+				 <a href="#" class= "tag_item">Ponny</a>
+				 <psan class= "fecha_item"> <strong> 5 </strong> min ago</psan>
+
+			</div>
+
+			
+			
+
+			<div class="votacion"> 
+				<a href="#" class="up icon-f-arriba"></a>
+				666
+				<a href="#" class="down icon-f-abajo"></a>
+
+				<a href="#" class="comentarios_item">69</a>
+				<a href="#" class="guardar_item icon-estrella"></a>
 			</div>
 
 		</article>
@@ -59,6 +186,39 @@
 		<p><strong>Pie de página Coño </strong></p>
 		<p>Mejorando.la 2014</p>
 	</footer>
+	
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="formulario.js"></script>
+
+
+		<script>
+			/*window.onload = function()
+			{
+				console.log('Ya se disparo el evento onload');
+			};
+
+			$(function()
+				{
+					console.log("ya se disparo el evento DOmContentLoaded");
+				});*/
+
+		$(function(){
+			 var geo = navigator.geolocation;
+
+			
+
+			 function geo_exito(coords){
+			 	console.log(coords);
+			 }
+			 function geo_error(){
+			 	console.log("No se donde estas");
+			 } 
+	 		
+	 		geo.getCurrentPosition(geo_exito,geo_error);
+		});
+
+		</script>
+
 
 </body>  
 
