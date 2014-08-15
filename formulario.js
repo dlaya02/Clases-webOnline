@@ -4,7 +4,6 @@ var $form = $('#formulario'),
 	$url = $('#link'),
 	$primerItem = $('.item').first(),
 	$lista = $('#contenido');
-<<<<<<< HEAD
 var	ss= sessionStorage,
 	ls= localStorage;
 
@@ -26,13 +25,10 @@ var id = setInterval(function()
 		ss.setItem('url',$url.val());
 	},1000);
 
-=======
->>>>>>> origin/master
 
 function mostrarOcultarformulario()
 {
 		$form.slideToggle();
-<<<<<<< HEAD
 		$lista.slideToggle();
 		//return false;
 }
@@ -62,8 +58,6 @@ function agregarPost(e)
 	$titulo.val("");
 	$url.val("");
 	$save=0;
-=======
-
 
 		return false;
 }
@@ -82,7 +76,6 @@ function agregarPost()
 	$lista.prepend(clon);
 	clon.slideDown();
 
->>>>>>> origin/master
 }
 
 $('#publicar_nav').click(mostrarOcultarformulario);
